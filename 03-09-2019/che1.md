@@ -1,3 +1,37 @@
+문제 1번:
+```python
+def solution(A):
+    # write your code in Python 3.6
+    n = len(A)
+    count = [0] * (n + 1)
+    for i in A:
+        try:
+            count[i] += 1
+        except IndexError:
+            return 0
+        if count[i] > 1:
+            return 0
+    return 1
+```
+
+- - -
+
+문제 2번:
+```python
+def solution(X, A):
+    # write your code in Python 3.6
+    count = [1] + ([0] * X)
+    leaves = 0
+    for i in range(len(A)):
+        if count[A[i]] == 0:
+            count[A[i]] = 1
+            leaves += 1
+        if leaves == X:
+            return i
+    return -1
+```
+
+- - -
 
 문제 3번:
 ```python
@@ -48,5 +82,5 @@ def solution(A):
     elif set(count[1:]) == {1}:
         return len(count)
         
-    return count[1:].index(0) + 1<Paste>
+    return count[1:].index(0) + 1
 ```

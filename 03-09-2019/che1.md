@@ -1,4 +1,4 @@
-```
+```python
 def solution(A):
     if len(A) == 1:
         if A[0] < 0:

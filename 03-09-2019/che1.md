@@ -1,3 +1,30 @@
+
+문제 3번:
+```python
+def solution(N, A):
+    count = [0] * (N + 1)
+    max_num_before = 0
+    max_num = 0
+
+    for i in A:
+        if i == N + 1 and max_num_before == max_num:
+            continue
+
+        elif i == N + 1:
+            count = [max_num] * (N + 1)
+        
+        else:
+            count[i] += 1
+            if count[i] > max_num:
+                max_num_before = max_num
+                max_num = count[i]
+    return count[1:]
+```
+
+- - -
+
+문제 4번:
+
 ```python
 def solution(A):
     if len(A) == 1:

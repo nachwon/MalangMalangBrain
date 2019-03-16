@@ -1,6 +1,6 @@
-# 1 PassingCars
+# 1. PassingCars
 
-'''python
+```python
 def pre_sum(A):
     n = len(A)
     P = [0] * (n + 1)
@@ -18,13 +18,13 @@ def solution(A):
     if result > 1000000000:
         return -1
     return result
-'''
+```
 
 - - -
 
-# 3 MinAvgTwoSlice
+# 3. MinAvgTwoSlice
 
-'''python
+```python
 def pre_sum(l):
     n = len(l)
     P = [0] * (n + 1)
@@ -59,4 +59,4 @@ def solution(A):
                 if min_ind > i:
                     min_ind = i
     return min_ind
-'''
+```

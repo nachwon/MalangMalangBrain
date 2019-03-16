@@ -22,6 +22,11 @@ def solution(A):
 
 - - -
 
+# 2. GenomicRangeQuery
+풀기 실패ㅋㅋㅠㅠ
+
+- - -
+
 # 3. MinAvgTwoSlice
 
 ```python

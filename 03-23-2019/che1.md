@@ -47,3 +47,24 @@ def solution(A):
 ```
 
 - - -
+
+# 4: NumberOfDiscIntersections
+
+```python
+def solution(A):
+    # write your code in Python 3.6
+    A = [(index - value, index + value) for index, value in enumerate(A)]
+    A.sort(key=lambda x: x[0])
+    
+    intersect = 0
+    while len(A) > 1:
+        t_left, t_right = A.pop()
+        for left, right in A:
+            if right < t_left:
+                continue
+            else:
+                intersect += 1
+    if intersect > 10000000:
+        return -1
+   ```
+   - - -

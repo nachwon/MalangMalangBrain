@@ -50,6 +50,8 @@ def solution(A):
 
 # 4: NumberOfDiscIntersections
 
+52% 밖에 안됨... (답은 다 맞췄다...)
+
 ```python
 def solution(A):
     # write your code in Python 3.6

@@ -68,5 +68,6 @@ def solution(A):
                 intersect += 1
     if intersect > 10000000:
         return -1
+    return intersect
    ```
    - - -

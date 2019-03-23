@@ -25,3 +25,25 @@ def solution(A):
     else:
         return A[-1] * A[-2] * A[-3]
 ```
+
+- - -
+
+# 3: Triangle
+
+```python
+def solution(A):
+    A.sort()
+    
+    if len(A) < 3:
+        return 0
+
+    while len(A) > 2:
+        if A[-2] + A[-3] <= A[-1]:
+            A.pop()
+        else: 
+            return 1
+    
+    return 0
+```
+
+- - -

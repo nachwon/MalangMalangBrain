@@ -11,7 +11,7 @@ def solution(A):
 def solution(A):
     # 먼저 정렬을 한다
     A = sorted(A)
-    # 모두 음수이면 제일 앞 세 숫자를 더함
+    # 모두 음수이면 제일 뒤 세 숫자를 곱함
     if A[-1] < 0:
         return A[-1] * A[-2] * A[-3]
     

@@ -11,7 +11,7 @@ def solution(A):
 def solution(A):
     # 먼저 정렬을 한다
     A = sorted(A)
-    # 모두 음수이면 제일 앞 세 숫자를 더함
+    # 모두 음수이면 제일 뒤 세 숫자를 곱함
     if A[-1] < 0:
         return A[-1] * A[-2] * A[-3]
     
@@ -25,3 +25,49 @@ def solution(A):
     else:
         return A[-1] * A[-2] * A[-3]
 ```
+
+- - -
+
+# 3: Triangle
+
+```python
+def solution(A):
+    A.sort()
+    
+    if len(A) < 3:
+        return 0
+
+    while len(A) > 2:
+        if A[-2] + A[-3] <= A[-1]:
+            A.pop()
+        else: 
+            return 1
+    
+    return 0
+```
+
+- - -
+
+# 4: NumberOfDiscIntersections
+
+52% 밖에 안됨... (답은 다 맞췄다...)
+
+```python
+def solution(A):
+    # write your code in Python 3.6
+    A = [(index - value, index + value) for index, value in enumerate(A)]
+    A.sort(key=lambda x: x[0])
+    
+    intersect = 0
+    while len(A) > 1:
+        t_left, t_right = A.pop()
+        for left, right in A:
+            if right < t_left:
+                continue
+            else:
+                intersect += 1
+    if intersect > 10000000:
+        return -1
+    return intersect
+   ```
+   - - -

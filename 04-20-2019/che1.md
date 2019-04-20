@@ -38,3 +38,15 @@ def solution(A):
         return 0
     return max_profit
 ```
+
+아래는 모범 답안...
+
+```python
+def solution(A):
+    min_day = 200000
+    max_profit = 0
+    for a in A:
+        min_day = min(a, min_day)
+        max_profit = max(max_profit, a - min_day)
+    return max_profit
+```

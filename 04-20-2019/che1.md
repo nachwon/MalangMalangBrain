@@ -50,3 +50,31 @@ def solution(A):
         max_profit = max(max_profit, a - min_day)
     return max_profit
 ```
+
+- - -
+
+# MaxSliceSum
+
+```python
+def solution(A):
+    # write your code in Python 3.6
+    if len(A) == 1:
+        return A[0]
+        
+    max_sum = 0
+    max_val = -1000000
+    max_slice = 0
+    
+    all_neg = True
+    for a in A:
+        if a >= 0:
+            all_neg = False
+        max_val = max(max_val, a)
+        max_sum = max(0, max_sum + a)
+        max_slice = max(max_slice, max_sum)
+    
+    if all_neg:
+        return max(A)
+
+    return max(max_slice, max_val)
+```

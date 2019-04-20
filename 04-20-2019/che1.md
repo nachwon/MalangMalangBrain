@@ -78,3 +78,20 @@ def solution(A):
 
     return max(max_slice, max_val)
 ```
+
+- - -
+
+# MaxDoubleSliceSum
+
+못 풀어서 모범 답안을 보았다... 양쪽 끝에서부터 계산해오는 방식을 왜 생각 못했을까...
+
+```python
+def solution(A):
+    N = len(A)
+    starts, ends = [0] * N, [0] * N
+    for i in range(1,N-1):
+        left, right = i, N-i-1
+        starts[left] = max(starts[left - 1] + A[left], 0)
+        ends[right] = max(ends[right + 1] + A[right], 0)
+    return max((starts[i-1] + ends[i+1] for i in range(1, N-1)))
+```

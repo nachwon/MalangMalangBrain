@@ -10,8 +10,8 @@ class ReadContext(object):
         if not file_name:
             file_name = 'input.txt'
         dir_name = os.path.dirname(os.path.abspath(__file__))
-        if os.path.exists(f'{dir_name}/{file_name}'):
-            self._file_obj = open(f'{dir_name}/{file_name}', 'r')
+        if os.path.exists('{0}/{1}'.format(dir_name, file_name)):
+            self._file_obj = open('{0}/{1}'.format(dir_name, file_name), 'r')
         else:
             self._file_obj = None
 
